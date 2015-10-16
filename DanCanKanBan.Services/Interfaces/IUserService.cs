@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DanCanKanBan.Services.Interfaces
+﻿namespace DanCanKanBan.Services.Interfaces
 {
     interface IUserService
     {

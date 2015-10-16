@@ -223,11 +223,22 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\DanCanKanBan.DataModel\DanCanKanBan.DataModel.csproj">
+      <Project>{b715bfec-1c25-4a3b-91f3-47ba3cdabe31}</Project>
+      <Name>DanCanKanBan.DataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DanCanKanBan.Services\DanCanKanBan.Services.csproj">
+      <Project>{d6a09893-bcff-407d-8da7-4bf4cffdc8eb}</Project>
+      <Name>DanCanKanBan.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DanCanKanBan.ViewModels\DanCanKanBan.ViewModels.csproj">
+      <Project>{db69c34c-8a43-43f8-abf8-822a9b6ff50f}</Project>
+      <Name>DanCanKanBan.ViewModels</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
