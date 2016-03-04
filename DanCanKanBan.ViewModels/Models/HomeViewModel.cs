@@ -8,7 +8,7 @@ namespace DanCanKanBan.ViewModels.Models
         {
             this.Projects = new Collection<ProjectGridRowModel>();
         }
-
+        
         public Collection<ProjectGridRowModel> Projects { get; private set; }
     }
 }
