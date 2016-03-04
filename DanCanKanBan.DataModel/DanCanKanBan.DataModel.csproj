@@ -30,6 +30,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Insight.Database, Version=5.2.7.0, Culture=neutral, PublicKeyToken=f35c6ef87e515afc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Insight.Database.Core.5.2.7\lib\NET45\Insight.Database.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Insight.Database.Configuration, Version=5.2.7.0, Culture=neutral, PublicKeyToken=f35c6ef87e515afc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Insight.Database.5.2.7\lib\NET45\Insight.Database.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Insight.Database.Providers.Default, Version=5.2.7.0, Culture=neutral, PublicKeyToken=f35c6ef87e515afc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Insight.Database.5.2.7\lib\NET45\Insight.Database.Providers.Default.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,8 +52,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\BaseDataObject.cs" />
+    <Compile Include="Criteria\UserSearchCriteria.cs" />
+    <Compile Include="Interfaces\IDataObject.cs" />
+    <Compile Include="Interfaces\IGenericRepository.cs" />
+    <Compile Include="Interfaces\ISearchCriteria.cs" />
+    <Compile Include="Interfaces\IUnitOfWork.cs" />
+    <Compile Include="Models\Enums.cs" />
+    <Compile Include="Models\File.cs" />
+    <Compile Include="Models\Permission.cs" />
+    <Compile Include="Models\PermissionRole.cs" />
+    <Compile Include="Models\Project.cs" />
+    <Compile Include="Models\ProjectMember.cs" />
+    <Compile Include="Models\ProjectRole.cs" />
+    <Compile Include="Models\Task.cs" />
+    <Compile Include="Models\Team.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Sql\SqlUserRepository.cs" />
+    <Compile Include="UnitOfWork\SqlUnitOfWork.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,30 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using DanCanKanBan.DataModel.Interfaces;
+using DanCanKanBan.Services.Interfaces;
+using DanCanKanBan.ViewModels.Models;
 
 namespace DanCanKanBan.Web.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IConfigurationSettings Settings;
+        private readonly IUnitOfWork UnitOfWork;
+        private readonly IUserSession UserSession;
+
+        public HomeController(IUnitOfWork unitOfWork, IConfigurationSettings settings, IUserSession session)
+        {
+            this.Settings = settings;
+            this.UnitOfWork = unitOfWork;
+            this.UserSession = session;
+        }
+
         public ActionResult Index()
         {
-            return View();
+            HomeViewModel model = new HomeViewModel();
+
+
+
+            return View(model);
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
 
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
     }
 }
