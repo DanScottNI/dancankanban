@@ -76,6 +76,8 @@
     <Compile Include="Interfaces\IUserService.cs" />
     <Compile Include="Interfaces\IUserSession.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ProjectService.cs" />
+    <Compile Include="Services\UserService.cs" />
     <Compile Include="Session\UserSettings.cs" />
     <Compile Include="Session\WebUserSession.cs" />
   </ItemGroup>

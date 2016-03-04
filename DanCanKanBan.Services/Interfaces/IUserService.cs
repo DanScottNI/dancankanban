@@ -1,6 +1,6 @@
 ﻿namespace DanCanKanBan.Services.Interfaces
 {
-    interface IUserService
+    public interface IUserService
     {
     }
 }
